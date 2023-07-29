@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'customer_reward_system'
 require_relative 'customer_purchases_data'
 require_relative 'rule_configurations'

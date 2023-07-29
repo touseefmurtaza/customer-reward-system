@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 module Rules
   class PurchaseAmount < Base
-    def initialize(amount_cents, reward)
+    def initialize(amount_cents, reward) # rubocop:disable Lint/MissingSuper
       @amount_cents = amount_cents
       @reward = reward
     end
@@ -9,8 +11,6 @@ module Rules
       customer_purchase[:purchase_amount_cents] > @amount_cents
     end
 
-    def reward
-      @reward
-    end
+    attr_reader :reward
   end
 end

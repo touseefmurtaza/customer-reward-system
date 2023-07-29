@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../rules/base'
 
 RSpec.describe Rules::Base do

@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require_relative '../../rules/base'
 require_relative '../../rules/may_fourth'
 
 RSpec.describe Rules::MayFourth do
   let(:may_fourth_date) { Time.utc(2023, 5, 4) }
-  let(:reward) { "Star Wars themed item added to delivery" }
+  let(:reward) { 'Star Wars themed item added to delivery' }
   let(:may_fourth_rule) { Rules::MayFourth.new(may_fourth_date, reward) }
 
   describe '#matches?' do

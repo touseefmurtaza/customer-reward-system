@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require_relative '../../rules/base'
 require_relative '../../rules/second_purchase'
 
-RSpec.describe Rules::SecondPurchase do
+RSpec.describe Rules::SecondPurchase do # rubocop:disable Metrics/BlockLength
   let(:thirty_days_window) { 30 * 24 * 60 * 60 }
-  let(:reward) { "twenty percent off next order" }
+  let(:reward) { 'twenty percent off next order' }
   let(:second_purchase_rule) { Rules::SecondPurchase.new(thirty_days_window, reward) }
 
   describe '#matches?' do

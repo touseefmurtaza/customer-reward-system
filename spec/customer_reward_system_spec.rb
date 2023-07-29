@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require_relative '../customer_reward_system'
 
-RSpec.describe CustomerRewardSystem do
+RSpec.describe CustomerRewardSystem do # rubocop:disable Metrics/BlockLength
   let(:reward_system) { CustomerRewardSystem.new }
 
   describe '#add_rule' do

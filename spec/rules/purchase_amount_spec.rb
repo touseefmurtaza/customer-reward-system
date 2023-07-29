@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require_relative '../../rules/base'
 require_relative '../../rules/purchase_amount'
 
 RSpec.describe Rules::PurchaseAmount do
   let(:amount_cents) { 1500 }
-  let(:reward) { "next purchase free" }
+  let(:reward) { 'next purchase free' }
   let(:purchase_amount_rule) { Rules::PurchaseAmount.new(amount_cents, reward) }
 
   describe '#matches?' do
